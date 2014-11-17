@@ -394,7 +394,7 @@ class BluetoothManagerService extends IBluetoothManager.Stub {
         }
         int callingAppId = UserHandle.getAppId(Binder.getCallingUid());
 
-        if (callingAppId != Process.NFC_UID) {
+        if (callingAppId != Process.BLUETOOTH_UID) {
             throw new SecurityException("no permission to enable Bluetooth quietly");
         }
 
@@ -1130,7 +1130,7 @@ class BluetoothManagerService extends IBluetoothManager.Stub {
         try {
             foregroundUser = ActivityManager.getCurrentUser();
             valid = (callingUser == foregroundUser) ||
-                    callingAppId == Process.NFC_UID ||
+                    callingAppId == Process.BLUETOOTH_UID ||
                     callingAppId == mSystemUiUid;
             if (DBG) {
                 Log.d(TAG, "checkIfCallerIsForegroundUser: valid=" + valid
