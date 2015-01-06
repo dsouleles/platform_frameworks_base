@@ -2075,10 +2075,6 @@
   <java-symbol type="bool" name="config_sms_force_7bit_encoding" />
   <java-symbol type="array" name="config_sms_convert_destination_number_support" />
 
-  <!-- Back button long-press kill -->
-  <java-symbol type="integer" name="config_backKillTimeout" />
-  <java-symbol type="string" name="app_killed_message" />
-
   <!-- Advanced power menu -->
   <java-symbol type="string" name="global_action_reboot" />
   <java-symbol type="string" name="reboot_system" />
